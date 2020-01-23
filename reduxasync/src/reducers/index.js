@@ -21,6 +21,15 @@ export const reducer = (state = initialState, action) => {
         isLoading: false,
         joke: action.payload
       }
+
+    case FETCHING_ACTIVITY_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        joke: 'Failure'
+      }
       default: return state;
   }
+
+
 };
